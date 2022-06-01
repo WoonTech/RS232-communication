@@ -1,0 +1,12 @@
+AR rs232txd behavioral "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Txd.vhd" sub00/vhpl06 1607704135
+EN rs232rxd NULL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" sub00/vhpl00 1607704136
+EN rs232systemclock NULL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/SystemClock.vhd" sub00/vhpl10 1606454032
+EN systemclock NULL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/SystemClock.vhd" sub00/vhpl08 1606449648
+AR txd behavioral "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Txd.vhd" sub00/vhpl03 1606276590
+EN rs232txd NULL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Txd.vhd" sub00/vhpl05 1607704134
+AR rs232systemclock behavioral "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/SystemClock.vhd" sub00/vhpl11 1606454033
+AR rs232 behavioral "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/Rs232.vhd" sub00/vhpl07 1607704139
+AR systemclock behavioral "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/SystemClock.vhd" sub00/vhpl09 1606449568
+EN txd NULL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Txd.vhd" sub00/vhpl02 1606276589
+EN rs232 NULL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/Rs232.vhd" sub00/vhpl04 1607704138
+AR rs232rxd rs232rxd_arch "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" sub00/vhpl01 1607704137
