@@ -1,0 +1,9 @@
+V3 4
+FL "C:/Users/Wan Heng Woon/OneDrive/Desktop/project1/project_year4/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" 2020/10/28.12:30:52 P.20131013
+FL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" 2020/11/25.16:35:45 P.20131013
+EN work/Rs232Rxd 1606293360 \
+      FL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Rs232Rxd/Rs232Rxd_Arch 1606293361 \
+      FL "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" \
+      EN work/Rs232Rxd 1606293360

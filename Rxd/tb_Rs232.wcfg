@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/tb_Rs232Rxd_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="tb_rs232rxd" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wave_markers>
+      <marker time="244125000000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/tb_rs232rxd/tb_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_reset</obj_property>
+      <obj_property name="ObjectShortName">tb_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/tb_clock16x" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_clock16x</obj_property>
+      <obj_property name="ObjectShortName">tb_clock16x</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/tb_rxd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rxd</obj_property>
+      <obj_property name="ObjectShortName">tb_rxd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/irxd1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">irxd1</obj_property>
+      <obj_property name="ObjectShortName">irxd1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/irxd2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">irxd2</obj_property>
+      <obj_property name="ObjectShortName">irxd2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/iclock1xenable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">iclock1xenable</obj_property>
+      <obj_property name="ObjectShortName">iclock1xenable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/iclockdiv" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">iclockdiv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">iclockdiv[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/iclock1x" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">iclock1x</obj_property>
+      <obj_property name="ObjectShortName">iclock1x</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/presstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">presstate</obj_property>
+      <obj_property name="ObjectShortName">presstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/ishiftregister" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ishiftregister[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ishiftregister[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/inobitsreceived" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inobitsreceived[3:0]</obj_property>
+      <obj_property name="ObjectShortName">inobitsreceived[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/ienabledataout" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ienabledataout</obj_property>
+      <obj_property name="ObjectShortName">ienabledataout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/tb_dataout1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_dataout1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_dataout1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/ireset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ireset</obj_property>
+      <obj_property name="ObjectShortName">ireset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/tb_clock16x_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_clock16x_period</obj_property>
+      <obj_property name="ObjectShortName">tb_clock16x_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs232rxd/uut/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/tb_Rs232Rxd_isim_beh.exe" -prj "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/tb_Rs232Rxd_beh.prj" "work.tb_Rs232Rxd" 

@@ -1,0 +1,10 @@
+Command line:
+   Rs232Rxd_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49958
+
+Sun Nov 15 21:52:31 2020
+
+
+ Elaboration Time: 0.03125 sec

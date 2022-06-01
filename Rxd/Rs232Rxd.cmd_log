@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/Wan Heng Woon/OneDrive/Desktop/project1/project_year4/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.xst" -ofn "C:/Users/Wan Heng Woon/OneDrive/Desktop/project1/project_year4/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-ft256-5 "Rs232Rxd.ngc" Rs232Rxd.ngd  
+map -intstyle ise -p xc3s500e-ft256-5 -cm area -ir off -pr off -c 100 -o Rs232Rxd_map.ncd Rs232Rxd.ngd Rs232Rxd.pcf 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.syr" 
