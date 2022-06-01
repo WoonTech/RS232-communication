@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Rs232Txd.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-ft256-5 "Rs232Txd.ngc" Rs232Txd.ngd  
+map -intstyle ise -p xc3s500e-ft256-5 -cm area -ir off -pr off -c 100 -o Rs232Txd_map.ncd Rs232Txd.ngd Rs232Txd.pcf 
+map -intstyle ise -p xc3s500e-ft256-5 -cm area -ir off -pr off -c 100 -o Rs232Txd_map.ncd Rs232Txd.ngd Rs232Txd.pcf 
