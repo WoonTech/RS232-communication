@@ -1,0 +1,544 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: Rs232.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Rs232.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Rs232"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-ft256
+
+---- Source Options
+Top Module Name                    : Rs232
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Txd.vhd" in Library work.
+Entity <rs232txd> compiled.
+Entity <rs232txd> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" in Library work.
+Entity <rs232rxd> compiled.
+Entity <rs232rxd> (Architecture <rs232rxd_arch>) compiled.
+Compiling vhdl file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/Rs232.vhd" in Library work.
+Entity <rs232> compiled.
+Entity <rs232> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Rs232> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Rs232Txd> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Rs232Rxd> in library <work> (architecture <rs232rxd_arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Rs232> in library <work> (Architecture <behavioral>).
+Entity <Rs232> analyzed. Unit <Rs232> generated.
+
+Analyzing Entity <Rs232Txd> in library <work> (Architecture <behavioral>).
+    Set property "enum_encoding = 00 01 11" for signal <presState>.
+    Set property "enum_encoding = 00 01 11" for signal <nextState>.
+Entity <Rs232Txd> analyzed. Unit <Rs232Txd> generated.
+
+Analyzing Entity <Rs232Rxd> in library <work> (Architecture <rs232rxd_arch>).
+    Set property "enum_encoding = 00 01 11 10" for signal <presState>.
+    Set property "enum_encoding = 00 01 11 10" for signal <nextState>.
+Entity <Rs232Rxd> analyzed. Unit <Rs232Rxd> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Rs232Txd>.
+    Related source file is "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Txd/Txd.vhd".
+WARNING:Xst:1780 - Signal <iTxdBuffer2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <iTxdBuffer1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Register <iEnableTxdBuffer> equivalent to <iClock1xEnable> has been removed
+    Register <iSend> equivalent to <iClock1xEnable> has been removed
+    Found finite state machine <FSM_0> for signal <presState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | iClock1x                  (rising_edge)        |
+    | Clock enable       | presState$not0000         (positive)           |
+    | Reset              | iClock1xEnable            (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | stidle                                         |
+    | Power Up State     | stidle                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <Txd>.
+    Found 1-bit register for signal <iClock1xEnable>.
+    Found 4-bit up counter for signal <iClockDiv>.
+    Found 1-bit register for signal <iEnableShift>.
+    Found 4-bit up counter for signal <iNoBitsSent>.
+    Found 10-bit register for signal <iTxdBuffer>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  13 D-type flip-flop(s).
+Unit <Rs232Txd> synthesized.
+
+
+Synthesizing Unit <Rs232Rxd>.
+    Related source file is "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd".
+    Found finite state machine <FSM_1> for signal <presState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | iClock1x                  (rising_edge)        |
+    | Reset              | iClock1xEnable            (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | stidle                                         |
+    | Power Up State     | stidle                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <iClock1xEnable>.
+    Found 4-bit up counter for signal <iClockDiv>.
+    Found 8-bit register for signal <iDataOut1>.
+    Found 4-bit up counter for signal <iNoBitsReceived>.
+    Found 1-bit register for signal <iRxd1>.
+    Found 1-bit register for signal <iRxd2>.
+    Found 8-bit register for signal <iShiftRegister>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  19 D-type flip-flop(s).
+Unit <Rs232Rxd> synthesized.
+
+
+Synthesizing Unit <Rs232>.
+    Related source file is "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/Rs232.vhd".
+Unit <Rs232> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 4-bit up counter                                      : 4
+# Registers                                            : 9
+ 1-bit register                                        : 6
+ 10-bit register                                       : 1
+ 8-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <U3/presState/FSM> on signal <presState[1:4]> with one-hot encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ stidle         | 0001
+ stdata         | 0010
+ ststop         | 1000
+ strxdcompleted | 0100
+----------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <U2/presState/FSM> on signal <presState[1:2]> with user encoding.
+-----------------------------------
+ State                 | Encoding
+-----------------------------------
+ stidle                | 00
+ stdata                | 01
+ sttxdstopandcompleted | 11
+-----------------------------------
+WARNING:Xst:1710 - FF/Latch <iTxdBuffer_9> (without init value) has a constant value of 1 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Counters                                             : 4
+ 4-bit up counter                                      : 4
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <iTxdBuffer_9> (without init value) has a constant value of 1 in block <Rs232Txd>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Rs232> ...
+
+Optimizing unit <Rs232Txd> ...
+
+Optimizing unit <Rs232Rxd> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Rs232, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Rs232.ngr
+Top Level Output File Name         : Rs232
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 44
+#      INV                         : 6
+#      LUT2                        : 12
+#      LUT2_D                      : 1
+#      LUT3                        : 12
+#      LUT3_L                      : 3
+#      LUT4                        : 9
+#      VCC                         : 1
+# FlipFlops/Latches                : 53
+#      FDC                         : 7
+#      FDCE                        : 15
+#      FDE                         : 8
+#      FDP                         : 1
+#      FDPE                        : 10
+#      FDRE                        : 10
+#      FDS                         : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 10
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500eft256-5 
+
+ Number of Slices:                       33  out of   4656     0%  
+ Number of Slice Flip Flops:             53  out of   9312     0%  
+ Number of 4 input LUTs:                 43  out of   9312     0%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    190    10%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+U2/iClockDiv_3                     | NONE(U2/iNoBitsSent_3) | 17    |
+Clock16x                           | BUFGP                  | 12    |
+U3/iClockDiv_31                    | BUFG                   | 24    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------+---------------------------+-------+
+Control Signal                                       | Buffer(FF name)           | Load  |
+-----------------------------------------------------+---------------------------+-------+
+U2/iClock1xEnable_inv(U2/iClock1xEnable_inv1_INV_0:O)| NONE(U2/Txd)              | 17    |
+U3/iClock1xEnable_inv(U3/iClock1xEnable_inv1_INV_0:O)| NONE(U3/iNoBitsReceived_0)| 16    |
+-----------------------------------------------------+---------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.688ns (Maximum Frequency: 271.142MHz)
+   Minimum input arrival time before clock: 3.647ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U2/iClockDiv_3'
+  Clock period: 3.123ns (frequency: 320.236MHz)
+  Total number of paths / destination ports: 43 / 23
+-------------------------------------------------------------------------
+Delay:               3.123ns (Levels of Logic = 1)
+  Source:            U2/iEnableShift (FF)
+  Destination:       U2/iNoBitsSent_3 (FF)
+  Source Clock:      U2/iClockDiv_3 rising
+  Destination Clock: U2/iClockDiv_3 rising
+
+  Data Path: U2/iEnableShift to U2/iNoBitsSent_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.514   0.945  U2/iEnableShift (U2/iEnableShift)
+     LUT2:I0->O            6   0.612   0.569  U2/presState_not00011 (U2/presState_not0001)
+     FDCE:CE                   0.483          U2/presState_FSM_FFd1
+    ----------------------------------------
+    Total                      3.123ns (1.609ns logic, 1.514ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock16x'
+  Clock period: 2.943ns (frequency: 339.812MHz)
+  Total number of paths / destination ports: 33 / 19
+-------------------------------------------------------------------------
+Delay:               2.943ns (Levels of Logic = 1)
+  Source:            U2/iClock1xEnable (FF)
+  Destination:       U2/iClock1xEnable (FF)
+  Source Clock:      Clock16x rising
+  Destination Clock: Clock16x rising
+
+  Data Path: U2/iClock1xEnable to U2/iClock1xEnable
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            18   0.514   0.977  U2/iClock1xEnable (U2/iClock1xEnable)
+     LUT2:I1->O            1   0.612   0.357  U2/iClock1xEnable_not00011 (U2/iClock1xEnable_not0001)
+     FDRE:CE                   0.483          U2/iClock1xEnable
+    ----------------------------------------
+    Total                      2.943ns (1.609ns logic, 1.334ns route)
+                                       (54.7% logic, 45.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U3/iClockDiv_31'
+  Clock period: 3.688ns (frequency: 271.142MHz)
+  Total number of paths / destination ports: 118 / 39
+-------------------------------------------------------------------------
+Delay:               3.688ns (Levels of Logic = 2)
+  Source:            U3/iNoBitsReceived_1 (FF)
+  Destination:       U3/iShiftRegister_7 (FF)
+  Source Clock:      U3/iClockDiv_31 rising
+  Destination Clock: U3/iClockDiv_31 rising
+
+  Data Path: U3/iNoBitsReceived_1 to U3/iShiftRegister_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.514   0.721  U3/iNoBitsReceived_1 (U3/iNoBitsReceived_1)
+     LUT2_D:I0->LO         1   0.612   0.103  U3/iEnableDataOut_inv_SW0 (N12)
+     LUT4:I3->O            8   0.612   0.643  U3/iEnableDataOut_inv (U3/iEnableDataOut_inv)
+     FDCE:CE                   0.483          U3/iShiftRegister_0
+    ----------------------------------------
+    Total                      3.688ns (2.221ns logic, 1.467ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock16x'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              3.647ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       U3/iClockDiv_3 (FF)
+  Destination Clock: Clock16x rising
+
+  Data Path: Reset to U3/iClockDiv_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.532  Reset_IBUF (Reset_IBUF)
+     LUT2:I0->O            7   0.612   0.602  U3/iClockDiv_or00001 (U3/iClockDiv_or0000)
+     FDS:S                     0.795          U3/iRxd1
+    ----------------------------------------
+    Total                      3.647ns (2.513ns logic, 1.134ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U2/iClockDiv_3'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.412ns (Levels of Logic = 2)
+  Source:            DataIn<7> (PAD)
+  Destination:       U2/iTxdBuffer_8 (FF)
+  Destination Clock: U2/iClockDiv_3 rising
+
+  Data Path: DataIn<7> to U2/iTxdBuffer_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.426  DataIn_7_IBUF (DataIn_7_IBUF)
+     LUT2:I1->O            1   0.612   0.000  U2/iTxdBuffer_mux0001<8>1 (U2/iTxdBuffer_mux0001<8>)
+     FDPE:D                    0.268          U2/iTxdBuffer_8
+    ----------------------------------------
+    Total                      2.412ns (1.986ns logic, 0.426ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U3/iClockDiv_31'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            U3/iDataOut1_7 (FF)
+  Destination:       DataOut1<7> (PAD)
+  Source Clock:      U3/iClockDiv_31 rising
+
+  Data Path: U3/iDataOut1_7 to DataOut1<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.514   0.357  U3/iDataOut1_7 (U3/iDataOut1_7)
+     OBUF:I->O                 3.169          DataOut1_7_OBUF (DataOut1<7>)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.00 secs
+ 
+--> 
+
+Total memory usage is 4522636 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

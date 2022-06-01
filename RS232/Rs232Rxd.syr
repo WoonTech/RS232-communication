@@ -1,0 +1,442 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Reading design: Rs232Rxd.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Rs232Rxd.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Rs232Rxd"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-ft256
+
+---- Source Options
+Top Module Name                    : Rs232Rxd
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" in Library work.
+Entity <Rs232Rxd> compiled.
+Entity <Rs232Rxd> (Architecture <Rs232Rxd_Arch>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Rs232Rxd> in library <work> (architecture <Rs232Rxd_Arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Rs232Rxd> in library <work> (Architecture <Rs232Rxd_Arch>).
+    Set property "enum_encoding = 00 01 11 10" for signal <presState>.
+    Set property "enum_encoding = 00 01 11 10" for signal <nextState>.
+Entity <Rs232Rxd> analyzed. Unit <Rs232Rxd> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Rs232Rxd>.
+    Related source file is "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd".
+    Found finite state machine <FSM_0> for signal <presState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | iClock1x                  (rising_edge)        |
+    | Reset              | iClock1xEnable            (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | stidle                                         |
+    | Power Up State     | stidle                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <iClock1xEnable>.
+    Found 4-bit up counter for signal <iClockDiv>.
+    Found 8-bit register for signal <iDataOut1>.
+    Found 4-bit up counter for signal <iNoBitsReceived>.
+    Found 1-bit register for signal <iRxd1>.
+    Found 1-bit register for signal <iRxd2>.
+    Found 8-bit register for signal <iShiftRegister>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  19 D-type flip-flop(s).
+Unit <Rs232Rxd> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 5
+ 1-bit register                                        : 3
+ 8-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <presState/FSM> on signal <presState[1:4]> with one-hot encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ stidle         | 0001
+ stdata         | 0010
+ ststop         | 1000
+ strxdcompleted | 0100
+----------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Rs232Rxd> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Rs232Rxd, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Rs232Rxd.ngr
+Top Level Output File Name         : Rs232Rxd
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 16
+#      INV                         : 3
+#      LUT2                        : 5
+#      LUT3                        : 4
+#      LUT4                        : 2
+#      LUT4_D                      : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 31
+#      FDC                         : 7
+#      FDE                         : 16
+#      FDP                         : 1
+#      FDRE                        : 5
+#      FDS                         : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 2
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500eft256-5 
+
+ Number of Slices:                       18  out of   4656     0%  
+ Number of Slice Flip Flops:             31  out of   9312     0%  
+ Number of 4 input LUTs:                 15  out of   9312     0%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    190     5%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock16x                           | BUFGP                  | 7     |
+iClockDiv_31                       | BUFG                   | 24    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------+------------------------+-------+
+Control Signal                                 | Buffer(FF name)        | Load  |
+-----------------------------------------------+------------------------+-------+
+iClock1xEnable_inv(iClock1xEnable_inv1_INV_0:O)| NONE(iNoBitsReceived_0)| 8     |
+-----------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.854ns (Maximum Frequency: 259.440MHz)
+   Minimum input arrival time before clock: 3.624ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock16x'
+  Clock period: 2.687ns (frequency: 372.211MHz)
+  Total number of paths / destination ports: 18 / 10
+-------------------------------------------------------------------------
+Delay:               2.687ns (Levels of Logic = 1)
+  Source:            iClock1xEnable (FF)
+  Destination:       iClock1xEnable (FF)
+  Source Clock:      Clock16x rising
+  Destination Clock: Clock16x rising
+
+  Data Path: iClock1xEnable to iClock1xEnable
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.514   0.721  iClock1xEnable (iClock1xEnable)
+     LUT3:I0->O            1   0.612   0.357  iClock1xEnable_not00011 (iClock1xEnable_not0001)
+     FDRE:CE                   0.483          iClock1xEnable
+    ----------------------------------------
+    Total                      2.687ns (1.609ns logic, 1.078ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'iClockDiv_31'
+  Clock period: 3.854ns (frequency: 259.440MHz)
+  Total number of paths / destination ports: 118 / 39
+-------------------------------------------------------------------------
+Delay:               3.854ns (Levels of Logic = 2)
+  Source:            iNoBitsReceived_0 (FF)
+  Destination:       iShiftRegister_0 (FF)
+  Source Clock:      iClockDiv_31 rising
+  Destination Clock: iClockDiv_31 rising
+
+  Data Path: iNoBitsReceived_0 to iShiftRegister_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.514   0.541  iNoBitsReceived_0 (iNoBitsReceived_0)
+     LUT4_D:I3->O          2   0.612   0.449  presState_cmp_eq00001 (presState_cmp_eq0000)
+     LUT2:I1->O            8   0.612   0.643  iEnableDataOut_inv1 (iEnableDataOut_inv)
+     FDE:CE                    0.483          iShiftRegister_0
+    ----------------------------------------
+    Total                      3.854ns (2.221ns logic, 1.633ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock16x'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.624ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       iRxd1 (FF)
+  Destination Clock: Clock16x rising
+
+  Data Path: Reset to iRxd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.509  Reset_IBUF (Reset_IBUF)
+     LUT2:I0->O            7   0.612   0.602  iClockDiv_or00001 (iClockDiv_or0000)
+     FDS:S                     0.795          iRxd1
+    ----------------------------------------
+    Total                      3.624ns (2.513ns logic, 1.111ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'iClockDiv_31'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.754ns (Levels of Logic = 1)
+  Source:            Rxd (PAD)
+  Destination:       iShiftRegister_7 (FF)
+  Destination Clock: iClockDiv_31 rising
+
+  Data Path: Rxd to iShiftRegister_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.380  Rxd_IBUF (Rxd_IBUF)
+     FDE:D                     0.268          iShiftRegister_7
+    ----------------------------------------
+    Total                      1.754ns (1.374ns logic, 0.380ns route)
+                                       (78.3% logic, 21.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'iClockDiv_31'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            iDataOut1_7 (FF)
+  Destination:       DataOut1<7> (PAD)
+  Source Clock:      iClockDiv_31 rising
+
+  Data Path: iDataOut1_7 to DataOut1<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.514   0.357  iDataOut1_7 (iDataOut1_7)
+     OBUF:I->O                 3.169          DataOut1_7_OBUF (DataOut1<7>)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.43 secs
+ 
+--> 
+
+Total memory usage is 4522592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

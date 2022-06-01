@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/Rs232Rxd.xst" -ofn "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/Rs232Rxd.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-ft256-5 "Rs232Rxd.ngc" Rs232Rxd.ngd  
+map -intstyle ise -p xc3s500e-ft256-5 -cm area -ir off -pr off -c 100 -o Rs232Rxd_map.ncd Rs232Rxd.ngd Rs232Rxd.pcf 
+vhdtdtfi -prj RS232 -o "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/Rs232Rxd.vhi" -module Rs232Rxd -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../Rxd/Rs232Rxd.vhd 

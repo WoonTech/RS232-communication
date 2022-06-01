@@ -1,0 +1,5 @@
+set -tmpdir "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/xst/projnav.tmp"
+set -xsthdpdir "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/xst"
+elaborate
+-ifn Rs232Txd.prj
+-ifmt mixed

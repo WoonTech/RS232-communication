@@ -1,0 +1,25 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/tb_Rs232_isim_beh.exe -prj D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/tb_Rs232_beh.prj tb_Rs232 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/../Txd/Txd.vhd" into library work
+Parsing VHDL file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/../Rxd/Rs232Rxd.vhd" into library work
+Parsing VHDL file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/Rs232.vhd" into library work
+Parsing VHDL file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/tb_Rs232.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity Rs232Txd [rs232txd_default]
+Compiling architecture rs232rxd_arch of entity Rs232Rxd [rs232rxd_default]
+Compiling architecture behavioral of entity Rs232 [rs232_default]
+Compiling architecture behavior of entity tb_rs232
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 11 VHDL Units
+Built simulation executable D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/tb_Rs232_isim_beh.exe
+Fuse Memory Usage: 34388 KB
+Fuse CPU Usage: 937 ms

@@ -1,0 +1,36 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to D:/Project/Year 4 Project/HDL/tutorial/Lab-4/RS232/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" in Library work.
+Entity <rs232rxd> compiled.
+ERROR:HDLParsers:164 - "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" Line 47. parse error, unexpected OR, expecting THEN
+ERROR:HDLParsers:164 - "D:/Project/Year 4 Project/HDL/tutorial/Lab-4/Rxd/Rs232Rxd.vhd" Line 65. parse error, unexpected IF, expecting PROCESS
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> 
+
+Total memory usage is 4477836 kilobytes
+
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
